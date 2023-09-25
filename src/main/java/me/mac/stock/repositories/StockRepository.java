@@ -9,11 +9,11 @@ import java.util.List;
 
 @Repository
 public interface StockRepository extends JpaRepository<Stock, Long> {
-//    List<Stock> findByproductName(String productName);
+    //List<Stock> findByproductName(String productName);
 
 
 //    List<Stock> findByproductNameStartingWith(String productName);
 //    List<Stock> findByproductNameEndingWith(String productName);
 //    List<Stock> findByproductNameContaining(String productName);
-//    List<Stock> findByProductNameContainingIgnoreCase(String productName);
+    List<Stock> findByProductNameContainingIgnoreCase(String productName);
 }

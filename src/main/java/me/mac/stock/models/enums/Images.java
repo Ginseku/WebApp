@@ -19,6 +19,7 @@ public class Images {
     private boolean previewImage;
 
     @Lob
+    @Column(name = "bytes", columnDefinition = "longblob")
     private byte[] bytes;
 
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)

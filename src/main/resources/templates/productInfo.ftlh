@@ -6,6 +6,9 @@
 </head>
 <body>
 
+<#list images as img>
+    <img src="/images/${img.id}" height="60px"/><br><br>
+</#list>
 <b>Name product: </b>${stock.productName}<br>
 <b>Category: </b>${stock.category}<br>
 <b>Size: </b>${stock.size}<br>

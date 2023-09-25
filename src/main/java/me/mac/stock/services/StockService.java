@@ -28,16 +28,16 @@ public class StockService {
         Images image2;
         Images image3;
 
-        if(file1.getSize() != 0){
+        if (file1.getSize() != 0) {
             image1 = toImageEntity(file1);
             image1.setPreviewImage(true);
             stock.addImageToProduct(image1);
         }
-        if(file2.getSize() != 0){
+        if (file2.getSize() != 0) {
             image2 = toImageEntity(file2);
             stock.addImageToProduct(image2);
         }
-        if(file3.getSize() != 0){
+        if (file3.getSize() != 0) {
             image3 = toImageEntity(file3);
             stock.addImageToProduct(image3);
         }
@@ -59,16 +59,17 @@ public class StockService {
         stockRepository.deleteById(id);
     }
 
-    public Stock findProdById(Long id){
+    public Stock findProdById(Long id) {
         return stockRepository.findById(id).orElse(null);
     }
 
-//    public List<Stock> searchProd(String productName) {
-//        if (productName != null){
-//            return stockRepository.findByProductNameContainingIgnoreCase(productName);
-//        }
-//        return stockRepository.findAll();
-//    }
+    public List<Stock> searchProd(String productName) {
+        if (productName != null) {
+            return stockRepository.findByProductNameContainingIgnoreCase(productName);
+        } else {
+            return stockRepository.findAll();
+        }
+    }
 
 
 }

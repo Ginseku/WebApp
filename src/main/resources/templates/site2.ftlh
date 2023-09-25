@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<form action="/add" method="post">
+<form action="/add" method="post" enctype="multipart/form-data">
     <table border="1px">
         <tr>
             <td>
@@ -35,16 +35,30 @@
                 <input type="number" name="count">
             </td>
             <td>
+                <label>First photo:</label>
+                <input type="file" name="file1">
+            </td>
+            <td>
+                <label>Second photo:</label>
+                <input type="file" name="file2">
+            </td>
+            <td>
+                <label>Thirst photo:</label>
+                <input type="file" name="file3">
+            </td>
+            <td>
                 <input type="submit" value="add task">
             </td>
 
         </tr>
 
     </table>
-</form>
-<p>
-<p>
 
+</form>
+
+<p>
+<p>
+<p>
 <table border="1px">
     <tr>
         <td><label>Id</label></td>
@@ -57,7 +71,7 @@
         <td><label>Options</label></td>
         <td><label>More</label></td>
     </tr>
-    <#list showList as stock>
+    <#list products as stock>
 
     <tr>
         <tr>
@@ -68,12 +82,16 @@
             <td>${stock.color}</td>
             <td>${stock.count}</td>
             <td>${stock.price}</td>
-            <td><a href="${'/delete/'+stock.id}"">Delete</a></td>
+            <td><a href="${'/delete/'+stock.id}">Delete</a></td>
             <td><a href="${'/secondList/'+stock.id}">More...</td>
         </tr>
     </#list>
 </table>
-
+<p>
+<form action="/" method="get">
+    Find by name: <input type="text" name="productName">
+    <input type="submit" value="Search"/>
+</form>
 
 
 </body>
