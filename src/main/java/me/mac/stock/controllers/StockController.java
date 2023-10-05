@@ -49,9 +49,5 @@ public class StockController {
         return "redirect:/";
     }
 
-//    @GetMapping("/search")
-//    public String FindProdByName(@RequestParam(name = "productName", required = false) String productName, Model model){
-//        model.addAttribute("products", stockService.searchProd(productName));
-//        return "site2";
-//    }
+
 }

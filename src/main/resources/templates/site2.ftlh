@@ -6,7 +6,12 @@
       <link rel="stylesheet" type="text/css" href="/css/style.x35928.css"/>
 </head>
 <body>
-
+<h1>MAC | <a href="/login">Войти</a></h1><hr>
+<form action="/logout" method="post">
+    <input type="hidden" name="_csrf" value="${_csrf.token}">
+    <input type="submit" value="Logout">
+</form>
+<h4>Your personal warehose</h4>
 <form action="/add" method="post" enctype="multipart/form-data">
     <table border="1px">
         <tr>

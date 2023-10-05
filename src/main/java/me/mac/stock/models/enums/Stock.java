@@ -1,6 +1,8 @@
 package me.mac.stock.models.enums;
 
 import jakarta.persistence.*;
+//import javax.persistence.*;
+
 import lombok.*;
 
 import java.time.LocalDateTime;

@@ -3,6 +3,8 @@ package me.mac.stock.models.enums;
 import jakarta.persistence.*;
 import lombok.*;
 
+//import javax.persistence.*;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
